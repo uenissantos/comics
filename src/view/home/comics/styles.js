@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Main = styled.div`
+export const ComicsCenter = styled.div`
 ${() => css`
 
 `}

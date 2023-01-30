@@ -3,15 +3,14 @@ import styled, { css } from 'styled-components';
 export const Map = styled.div`
 ${() => css`
 
-width: 800px ;
 
-height: 600px ;
 .map {
-  height: 100vh;
+  width: 400px ;
+  height: 400px;
 }
 
 .map-marker {
-  margin-top: -30px;
+  margin-top: 30px;
 }
 
 .address {
@@ -29,6 +28,20 @@ height: 600px ;
   left: 50%;
   margin-left: -120px;
   margin-top: 12px;
+}
+
+.addressField {
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  width: 100%;
+  height: 32px;
+  margin-bottom: 8px;
+  padding: 0 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  outline: none;
+  text-overflow: ellipses;
 }
 `}
 `;

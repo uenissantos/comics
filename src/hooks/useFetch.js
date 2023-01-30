@@ -5,12 +5,14 @@ import { useQuery } from "react-query";
 
 
 const publicKey= import.meta.env.VITE_PUBLIC_KEY
-const privateKey= import.meta.env.VITE_PRIVAT_KEY
-const baseUrl= import.meta.env.VITE_PUBLIC_KEY
 
 
-  export const useFetch=(id='' ,time=1000)=>{
-const url =`https://gateway.marvel.com/v1/public/comics${id}?ts=1&apikey=${publicKey}&hash=175e24bfbea8c368a74bcecbf1ea5ab1&limit=20`
+
+ const hash= import.meta.env.VITE_HASH
+ 
+
+  export const useFetch=(  todo='comics',id='' ,time=1000)=>{
+const url =`https://gateway.marvel.com/v1/public/${todo}${id}?ts=1&apikey=${publicKey}&hash=${hash}&limit=20`
 
 const [state, setstate] = useState([]);
 

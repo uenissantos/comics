@@ -1,3 +1,8 @@
+import { createGlobalStyle, css } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
+${({ theme }) => css`
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -41,3 +46,41 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+
+
+
+
+a{
+color:${theme.colors.ligth};
+text-decoration: none ;
+
+    :hover{
+color:${theme.colors.hover} ;
+    
+border-bottom:1px solid ${theme.colors.hover}  ;
+}		
+
+}
+
+
+
+
+svg,button{
+    height: 40px ;
+    width:40px ;
+    border: none ;
+    background-color:transparent ;
+    color: ${theme.colors.primaryColor};
+
+    }
+
+	summary{
+    list-style-type:none
+
+}
+
+
+`}
+`

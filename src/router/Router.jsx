@@ -1,27 +1,33 @@
 
 import {  Route , Routes} from "react-router-dom"
 import { Details } from "../components/details/Details"
-import { Main } from "../components/main/main"
 import {Home} from '../view/home/home'
-import { Map } from "../view/map/Map"
+import { Map } from "../components/map/Map"
+import { ComicsCenter } from "../view/home/comics/comicsCenter"
 
 export const Routers=()=>{
 
 
 return(
 
-<Routes>
+
+
+    <Routes>
 
 <Route   element={<Home/>}>
-<Route  path="/"    element={ <Map/>}  />
-
-<Route  path="/lkl"    element={ <Main/>}  />
+    
+<Route  path="/"    element={ <ComicsCenter/>}  />
 
 <Route  path="/details/:id"  element={<Details/>}/>
+<Route  path="/map"    element={ <Map/>}  />
 
 </Route>
 
 </Routes>
+
+
+
+
 
 )
 

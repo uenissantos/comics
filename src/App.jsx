@@ -3,7 +3,6 @@ import { Navbar } from './components/navbar/Navbar'
 import { Routers } from './router/Router'
 import { queryClient } from './services/queryClient'
 import { BrowserRouter } from 'react-router-dom'
-
 function App() {
   
   return (
@@ -11,13 +10,16 @@ function App() {
 
 
 
-        <QueryClientProvider client={queryClient}   >
+<QueryClientProvider client={queryClient}   >
 
-<BrowserRouter>
+    <BrowserRouter>
 
-<Routers/>
+    
+  <Routers/>
+
 
 </BrowserRouter>
+
 
 
    </QueryClientProvider>
