@@ -6,7 +6,7 @@ import *  as Styled from './styles'
 export const Button = ({ children, onClick }) => {
 return (
 
-<Styled.Button  onCL onClick={onClick}>
+<Styled.Button  onClick={onClick}>
 {children}
 </Styled.Button>
 )

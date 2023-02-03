@@ -17,17 +17,20 @@ a{
     :hover{
         color: none ;
         border:none ;
+
     }
 }
 
 
 img{
-width:100%;
+width:80%;
 border-radius:10px ;
+height: 15rem ;
+
 
 }
 .wrapper-comic{
-margin: 30px ;
+margin:20px 5% ;
 display: flex ;
 justify-content: space-around ;
 
@@ -57,11 +60,18 @@ p{
 margin-top:10px ;
 font-size:18px ;
 color:${theme.colors.ligth} 
+
 }
+
+
+
+
 
 }
 
 .search{
+    position: relative ;
+bottom: 3rem ;
 
 margin-left: 25px ;
 display:flex ;
@@ -69,10 +79,47 @@ svg{
     height: 22px ;
     position: relative;
     padding:7px ;
-    right:10% ;
+    right:12% ;
 }
 }
 
+.button{
+    position: relative ;
+    bottom:15px ;
+    width:100% ;
+    text-align: center ;
+    margin:  5px auto 25px auto ;
+
+button{
+    margin:auto ;
+}
+
+}
+
+
+
+${theme.breakpoints.lg}{
+
+.grid{
+    grid-template-columns:repeat(4,1fr);
+}
+
+}
+
+
+${theme.breakpoints.xl}{
+width:70% ;
+margin:auto ;
+
+.grid{
+    grid-template-columns:repeat(5,1fr);
+}
+.search{
+
+    bottom:5rem ;
+}
+
+}
 
 
 `}

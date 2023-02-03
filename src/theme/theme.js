@@ -5,7 +5,8 @@ export const theme = {
 		primaryColor: '#00825d',
 		secundaryColor: '#204038',
 		hover:'#05f249',
-		ligth: '#6b7874',
+	ligthGreen:'#e0fff6',
+		ligth: '#919e9b',
 		white:'#ffffff',
 		dark:'#28302e'
 	},

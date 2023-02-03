@@ -1,7 +1,7 @@
     import React, { useEffect, useState } from 'react'
     import *  as Styled from './styles'
 
-    import {AiOutlineShopping,AiOutlineSearch,AiOutlineClose} from 'react-icons/ai'
+    import {AiOutlineShopping,AiOutlineClose} from 'react-icons/ai'
 
     
     
@@ -19,19 +19,13 @@
     export const Navbar = () => {
     const [moldalbag, setmoldalBag] = useState(false);
     const [menuButton, setMenuButton] = useState(false);
-const [searchValue, setSearchValue] = useState('');
-
-
-
     const visibleMoldalBag=()=> setmoldalBag(!moldalbag)
     const selectMenu=()=> setMenuButton(!menuButton)
 
 
 
-useEffect(() => {
-    
 
-}, []);
+    
 
 
 
@@ -55,6 +49,10 @@ useEffect(() => {
     </button>
 
     </article>
+
+
+
+
 
 <article  className='wrapper-nav-links'>
 <section  className='welcome'>

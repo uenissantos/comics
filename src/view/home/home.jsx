@@ -13,6 +13,7 @@ return (
 
 <Outlet/>
 
+
 </Styled.Home>
 )
 };

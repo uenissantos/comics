@@ -19,8 +19,8 @@ return(
 <Route  path="/"    element={ <ComicsCenter/>}  />
 
 <Route  path="/details/:id"  element={<Details/>}/>
-<Route  path="/map"    element={ <Map/>}  />
-
+{/* <Route  path="/map"    element={ <Map/>}  />
+ */}
 </Route>
 
 </Routes>

@@ -11,7 +11,8 @@ import React, { useCallback, useMemo, useState } from "react";
   import * as Styled from './styles'
   
   export const Map = () => {
-     const key='AIzaSyDvIx7ngQlx5CG5ki_N5HQOwpAZI6l71gU'
+     const key= import.meta.env.VITE_KEY_GOOGLE_MAP
+
 
 const myPosition={lat:-22.713045320169293, 
   lng:-43.44924987151032}

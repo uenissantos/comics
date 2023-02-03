@@ -76,10 +76,29 @@ svg,button{
 
     }
 
-	summary{
-    list-style-type:none
 
+summary{
+	list-style-type: none ;
+	::before 
+{  
+	background-color:black ;
+  content: "+"; 
+  color: #fff; 
+  font-weight: bold; 
+  margin-right: 2px;
+width:25px ;
 }
+}
+
+details[open]  {
+	summary{
+		::before{
+		  content: "--";
+
+		  height:20px
+	}}
+}
+
 
 
 `}

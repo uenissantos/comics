@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { ComicsFactory } from '../../../components/comicsFactory/ComicsFactory';
-import { useFetch } from '../../../hooks/useFetch';
+import { useFeth } from '../../../hooks/useFetch';
 import *  as Styled from './styles'
 
 
 export const ComicsCenter = () => {
-    const { state}=useFetch()
 
-
-
-
-
-
-
+         
+  const {data, status}=  useFeth()
 return (
 
-<Styled.ComicsCenter>
+<Styled.ComicsCenter>     
+    
+    <ComicsFactory  data={data}  status={status} />
+ 
 
-    <ComicsFactory  data={state} />
+
 </Styled.ComicsCenter>
 )
 };

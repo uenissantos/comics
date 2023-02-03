@@ -33,10 +33,11 @@ margin-top: 15px ;
     display:block ;
     height: 300px ;
     width: 50% ;
+    z-index:99 ;
     text-align: center ; 
     background-color:${theme.colors.white} ;
-    transition: 1s linear ;
-
+    transition: 0.5s linear ;
+top:4rem ;
 }
 
 
@@ -89,16 +90,6 @@ background-color: ${theme.colors.primaryColor}  ;
 		display: none;
 	}
 
-
-.search{
-width:500px;
-position: relative;
-bottom:5rem;
-left:15% ;
-
-}
-
-
 .welcome{
 position: relative;
 bottom:8rem;
@@ -120,13 +111,12 @@ flex-direction:row ;
 
 .wrapper-nav-links{
 	top: 60px ;
-    right: 555rem ;
     height:50px ;
+left:0 ;
+right:0 ;
 background-color:transparent;
 display:flex;
-width: 100% ;
-
-}
+width: 80% }
 
 .nav-links{  
 	background-color: transparent;
@@ -159,7 +149,6 @@ ${({theme}) => css`
 position: absolute ;
     width:  80%;
     max-width: 400px ;
-    height: 300px ;
 background-color:${theme.colors.white} ;
 border:2px solid ${theme.colors.ligth} ;
 border-radius: 8px ;
@@ -188,6 +177,10 @@ p{
     letter-spacing: 1px ;
     width: 70% ;
     margin: 25px auto ;
+}
+
+button{
+    margin-bottom:25px ;
 }
 }
 `}

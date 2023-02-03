@@ -1,34 +1,47 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import *  as Styled from './styles'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {Input} from '../../components/input/Input'
+import { Button } from '../button/Button';
+import { useQuery } from 'react-query';
+import axios from 'axios';
+import {useSearch}  from '../../hooks/useSearch'
+import { usePagination } from '../../hooks/usePagination';
+
+export const ComicsFactory = ({data=[], status='loading'} ) => {
+
+
+console.log('comics:',data);
+
+const [arg, setarg] = useState(''); 
+
+ 
+
+ const {comicFilter}= useSearch(data,arg,status)
+
+     const { currentItens,itensPerPage, 
+    setItensPerPage}=usePagination(comicFilter)
+
+    
+   function loadMore(){
+setItensPerPage( itensPerPage+10)
+
+   }
+ 
+
+  
 
 
 
-export const ComicsFactory = ({data=[]}) => {
-const [arg, setarg] = useState('');
 
 
-/*  const {comicFilter }=  Search({data})
- */
-            
+return ( 
 
-const comicFilter= useMemo(()=>{
-const lowerSearch=arg.toLowerCase()
-
-    return data.filter((comic)=> comic.title.toLowerCase().includes( lowerSearch)    ); 
-
-    },[arg]) 
-   
-     
-
-
-return (
 <>
 
 <Styled.ComicsFactory>
-<article   className='search'>
+ <article onClick={()=>tese}  className='search'>
     <Input  placeholder={`O que voçê quer ler  ?`} 
     type='text'
      value={arg}  onChange={(event)=>setarg(event.target.value)}/>
@@ -36,16 +49,22 @@ return (
  
     </article>
 
-<section className='grid'>
-{
-    comicFilter.map((comic)=>(
+    
+    <div>
+  {status === "loading" && <div>Loading...</div>}
+  {status === "error" && <div>Error fetching 
+    </div>}
+ </div>
+ <section className='grid'>
+ {   status === "success" && 
+
+    currentItens.map((comic, )=>(
 <div  className='wrapper-comic' key={comic.id}>
 
-{console.log(comic) }
 
     <ul>
 
-<Link  to={`/details/${comic.id}`}>
+<Link    to={`/details/${comic.id}`}>
 
 
             <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension} `} alt="" />      
@@ -64,11 +83,15 @@ return (
     </ul>
 </div>
     ))
-} 
+}  
 
 </section>
 
+ 
+<div className='button'>
+    <Button onClick={()=>loadMore()} >carregue mais </Button>
 
+</div>
 </Styled.ComicsFactory>
 
 </>
