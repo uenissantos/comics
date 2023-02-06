@@ -9,6 +9,7 @@ import React, { useCallback, useMemo, useState } from "react";
     DirectionsRenderer,
   } from "@react-google-maps/api";
   import * as Styled from './styles'
+import { Button } from "../button/Button";
   
   export const Map = () => {
      const key= import.meta.env.VITE_KEY_GOOGLE_MAP
@@ -129,10 +130,10 @@ console.log('LOG DOIS POINT' ,pointA);
               >
                 <input
                   className="addressField"
-                  placeholder="Digite o endereço final"
+                  placeholder="Digite o endereço para entrega"
                 />
               </StandaloneSearchBox>
-              <button onClick={traceRoute}>Traçar rota</button>
+              <Button onClick={traceRoute}>Traçar rota</Button>
             </div>
   
             { <Marker position={myPosition} />}

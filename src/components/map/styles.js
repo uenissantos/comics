@@ -1,33 +1,32 @@
 import styled, { css } from 'styled-components';
 
 export const Map = styled.div`
-${() => css`
-
-
+${({theme}) => css`
 .map {
-  width: 400px ;
+  width: 100% ;
   height: 400px;
+  text-align: center ;
+  border: 1px solid ${theme.colors.ligth} ;
 }
-
 .map-marker {
   margin-top: 30px;
 }
 
 .address {
-  box-sizing: border-box;
-  width: 240px;
+  width: 80vw;
+  max-width: 600px ;
   padding: 12px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: column ;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
   font-size: 14px;
   position: absolute;
-  left: 50%;
-  margin-left: -120px;
-  margin-top: 12px;
+left:0 ;
+right:0 ;
+margin:auto ;
+
 }
 
 .addressField {
@@ -42,6 +41,8 @@ ${() => css`
   font-size: 14px;
   outline: none;
   text-overflow: ellipses;
+
+
 }
 `}
 `;

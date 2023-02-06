@@ -9,9 +9,11 @@
    import {TbBrandPagekit}from 'react-icons/tb'
    import {MdPriceChange}from 'react-icons/md'
    import { formattedDate } from '../../util/formattedDate';
+import { storeLocation } from '../../util/storeLocation';
 
 
    export const Details = () => {
+
 
          let{id}=useParams();
 
@@ -79,7 +81,7 @@
                            <p>  R$ {details.prices[0].price}</p>
                            </div>
          
-                        <Button> adicionar à sacola  </Button>
+                        <Button   onClick={()=>storeLocation( details)}> adicionar à sacola  </Button>
          
          </div>
 

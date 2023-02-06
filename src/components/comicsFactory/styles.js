@@ -25,7 +25,7 @@ a{
 img{
 width:80%;
 border-radius:10px ;
-height: 15rem ;
+height: 13rem ;
 
 
 }

@@ -24,6 +24,7 @@
 
 
 
+      const valueLocal =  JSON.parse( localStorage.getItem('gap')) 
 
     
 
@@ -43,10 +44,10 @@
 
 
 
-    <button onClick={()=>visibleMoldalBag()}>
+  { valueLocal===''? <button onClick={()=>visibleMoldalBag()}>
         <AiOutlineShopping   />
 
-    </button>
+    </button>   :<Link to='/gap'  >   <AiOutlineShopping   />  </Link> }
 
     </article>
 

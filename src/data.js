@@ -1,4 +1,3 @@
-import { Footer } from "./components/footer/Footer"
 
 import  {FaCcMastercard,FaMoneyBillAlt,FaInstagram,FaTwitter,FaLinkedinIn,FaTiktok} from 'react-icons/fa'
 import  {RiPaypalFill} from 'react-icons/ri'
@@ -14,6 +13,5 @@ paragraph:'Para colocar livros em sua sacola, basta navegar pelo site ou utiliza
 
 
 export const footerLinks=['Blog', 'Fale Conosco','Perguntas frequentes', 'Politica de Privacidade','Termos de Serviço']
-
 
 
