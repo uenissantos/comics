@@ -38,7 +38,7 @@
          <button  onClick={()=>selectMenu()} className='menu-button'>
           { menuButton ?  <AiFillCloseCircle/>:<GiHamburgerMenu/>}
     </button>
-    <img src={logo} alt="logo" />
+   <Link to='/'> <img src={logo} alt="logo" /> </Link> 
 
 
 
@@ -65,7 +65,7 @@
 <ul className='nav-links' >
         { navLinks.map((link, i)=>(
         <li key={i}>
-            <Link>{link}</Link>
+            <Link  to='/'>{link}</Link>
         </li>
 
 
