@@ -38,7 +38,7 @@
          <button  onClick={()=>selectMenu()} className='menu-button'>
           { menuButton ?  <AiFillCloseCircle/>:<GiHamburgerMenu/>}
     </button>
-   <Link to='/'> <img src={logo} alt="logo" /> </Link> 
+   <img src={logo} alt="logo" />
 
 
 
