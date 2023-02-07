@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export  const storeLocation =( value)=>{
 
     
-let gap=[{}]
+let gap=[]
 
 
 

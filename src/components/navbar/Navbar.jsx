@@ -6,8 +6,6 @@
     
     
     import logo from '../../assets/logo.png'
-    import { Input } from '../input/Input';
-
     import {AiFillCloseCircle} from 'react-icons/ai'
     import {GiHamburgerMenu} from 'react-icons/gi'
     import {HiUserCircle} from 'react-icons/hi'
@@ -44,10 +42,7 @@
 
 
 
-  { valueLocal===''? <button onClick={()=>visibleMoldalBag()}>
-        <AiOutlineShopping   />
-
-    </button>   :<Link to='/gap'  >   <AiOutlineShopping   />  </Link> }
+  { <Link to='/gap'  >   <AiOutlineShopping   />  </Link> }
 
     </article>
 

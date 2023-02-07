@@ -5,6 +5,7 @@ import { AiFillDelete } from 'react-icons/ai'
 
 import{Map} from '../../components/map/Map'
 import { Button } from '../button/Button';
+import { FaUnderline } from 'react-icons/fa'
 
 
 export const Bag = () => {
@@ -17,7 +18,6 @@ const [ totalPrice,setTotalPrice] = useState('')
 
 
 
-console.log('lod do gap',data[1].price)
 
 
 const  detailsGap =()=>{
@@ -42,10 +42,14 @@ data.map((item)=>{
 return (
 
 <Styled.Bag>
+
+
+
+
 <article>
 
 {
-    data ? data.map((item)=>{
+    data && data.map((item)=>{
 return(
 <article key={item.id}  className='wrapper-items'>
   <img src={item.image} alt="" />
@@ -88,7 +92,7 @@ return(
 </article>
 )
 
-}):'Não tem dadaos'
+})
 }
 
 
